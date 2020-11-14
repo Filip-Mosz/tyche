@@ -13,6 +13,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
+import java.util.List;
 
 @Service
 public class FileSystemStorage {
@@ -43,6 +44,10 @@ public class FileSystemStorage {
         } catch (IOException e) {
             throw new StorageException("Failed to store file", e);
         }
+    }
+
+    public List<MediaEntity> list() {
+        return mediaRepository.findAll();
     }
 
 }
