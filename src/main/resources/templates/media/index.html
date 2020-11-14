@@ -17,7 +17,14 @@
         </tr>
     </table>
 </form>
+
+<ul>
+    <li th:each="file : ${files}">
+        <a th:href="${'#' + file.uuid}" th:text="${file.fileName}" />
+    </li>
+</ul>
 </body>
 </html>
 
 <!--to działa. to i kontroler i już :O-->
+<!--wygooglać jak wyświetlić plik z dysku-->

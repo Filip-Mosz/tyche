@@ -2,6 +2,8 @@ package com.filipmoszczynski.media.storage;
 
 import com.filipmoszczynski.media.repository.MediaEntity;
 import com.filipmoszczynski.media.repository.MediaRepository;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
@@ -17,6 +19,8 @@ import java.util.List;
 
 @Service
 public class FileSystemStorage {
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(FileSystemStorage.class);
 
     @Value("${mediaRootLocation}")
     private String path;
