@@ -9,16 +9,16 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 @Component
-public class RssTasks {
+public class ZipPackageTasks {
 
     private static final Logger LOGGER =
-            LoggerFactory.getLogger(RssTasks.class);
+            LoggerFactory.getLogger(ZipPackageTasks.class);
 
     private static final SimpleDateFormat dateFormat =
             new SimpleDateFormat("HH:mm:ss");
 
-    @Scheduled(fixedRate = 5000000)
-    public void getRss(){
-        LOGGER.info("Get RSS {}" , dateFormat.format(new Date()));
+    @Scheduled(fixedRate = 10000000)
+    public void createZipPackage() {
+        LOGGER.info("ZipPackage {}", dateFormat.format(new Date()));
     }
 }
