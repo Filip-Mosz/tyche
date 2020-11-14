@@ -1,4 +1,4 @@
-package com.filipmoszczynski.media.storage;
+package com.filipmoszczynski.media;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
